@@ -1,14 +1,14 @@
 # АНАЛИЗ ДАННЫХ И ИСКУССТВЕННЫЙ ИНТЕЛЛЕКТ [in GameDev]
 Отчет по лабораторной работе #1 выполнил(а):
-- Иванова Ивана Варкравтовна
-- РИ000024
+- Бикмухаметова Алина Рафаиловна
+- РИ300016
 Отметка о выполнении заданий (заполняется студентом):
 
 | Задание | Выполнение | Баллы |
 | ------ | ------ | ------ |
-| Задание 1 | # | 60 |
-| Задание 2 | # | 20 |
-| Задание 3 | # | 20 |
+| Задание 1 | * |  |
+| Задание 2 | # |  |
+| Задание 3 | # |  |
 
 знак "*" - задание выполнено; знак "#" - задание не выполнено;
 
@@ -21,105 +21,56 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-Структура отчета
-
-- Данные о работе: название работы, фио, группа, выполненные задания.
-- Цель работы.
-- Задание 1.
-- Код реализации выполнения задания. Визуализация результатов выполнения (если применимо).
-- Задание 2.
-- Код реализации выполнения задания. Визуализация результатов выполнения (если применимо).
-- Задание 3.
-- Код реализации выполнения задания. Визуализация результатов выполнения (если применимо).
-- Выводы.
-- ✨Magic ✨
-
 ## Цель работы
-Ознакомиться с основными операторами зыка Python на примере реализации линейной регрессии.
+Установить Unity, GitHub, VS Code, создать первый проект на Unity и добавить его в Git. 
 
 ## Задание 1
-### Пошагово выполнить каждый пункт раздела "ход работы" с описанием и примерами реализации задач
-Ход работы:
-- Произвести подготовку данных для работы с алгоритмом линейной регрессии. 10 видов данных были установлены случайным образом, и данные находились в линейной зависимости. Данные преобразуются в формат массива, чтобы их можно было вычислить напрямую при использовании умножения и сложения.
+Установить Unity и создать первый проект.
 
-```py
+![image](https://user-images.githubusercontent.com/76123476/191676858-11c74d65-6e08-422a-ab3e-81398b944470.png)
 
-In [ ]:
-#Import the required modules, numpy for calculation, and Matplotlib for drawing
-import numpy as np
-import matplotlib.pyplot as plt
-#This code is for jupyter Notebook only
-%matplotlib inline
+Добавить его в GitHub.
 
-# define data, and change list to array
-x = [3,21,22,34,54,34,55,67,89,99]
-x = np.array(x)
-y = [2,22,24,65,79,82,55,130,150,199]
-y = np.array(y)
+![image](https://user-images.githubusercontent.com/76123476/191677101-3bfead1a-3577-4439-b4d5-eb1317a1199e.png)
 
-#Show the effect of a scatter plot
-plt.scatter(x,y)
-
-```
-
-- Определите связанные функции. Функция модели: определяет модель линейной регрессии wx+b. Функция потерь: функция потерь среднеквадратичной ошибки. Функция оптимизации: метод градиентного спуска для нахождения частных производных w и b.
-
+Ссылка на репозиторий: https://github.com/peachofgod/unity
 
 ## Задание 2
-### Должна ли величина loss стремиться к нулю при изменении исходных данных? Ответьте на вопрос, приведите пример выполнения кода, который подтверждает ваш ответ.
+Создать первую сцену с кубом и шаром, где куб меняет цвет при столкновении с шаром и на консоле выводится текст с кем произошло столкновение.
+Код для реализации данной механики:
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-- Перечисленные в этом туториале действия могут быть выполнены запуском на исполнение скрипт-файла, доступного [в репозитории](https://github.com/Den1sovDm1triy/hfss-scripting/blob/main/ScreatingSphereInAEDT.py).
-- Для запуска скрипт-файла откройте Ansys Electronics Desktop. Перейдите во вкладку [Automation] - [Run Script] - [Выберите файл с именем ScreatingSphereInAEDT.py из репозитория].
+public class CheckCollider : MonoBehaviour
+{
+// Start is called before the first frame update
+void Start()
+{
 
-```py
+}
 
-import ScriptEnv
-ScriptEnv.Initialize("Ansoft.ElectronicsDesktop")
-oDesktop.RestoreWindow()
-oProject = oDesktop.NewProject()
-oProject.Rename("C:/Users/denisov.dv/Documents/Ansoft/SphereDIffraction.aedt", True)
-oProject.InsertDesign("HFSS", "HFSSDesign1", "HFSS Terminal Network", "")
-oDesign = oProject.SetActiveDesign("HFSSDesign1")
-oEditor = oDesign.SetActiveEditor("3D Modeler")
-oEditor.CreateSphere(
-	[
-		"NAME:SphereParameters",
-		"XCenter:="		, "0mm",
-		"YCenter:="		, "0mm",
-		"ZCenter:="		, "0mm",
-		"Radius:="		, "1.0770329614269mm"
-	], 
-)
+// Update is called once per frame
+void Update()
+{
 
-```
+}
+private void OnTriggerEnter(Collider other) {
+Debug.Log("Произошло столкновение с " + other.gameObject.name);
+other.GetComponent<Renderer>().material.SetColor("_Color", Color.green);
+}
+private void OnTriggerExit(Collider other) {
+Debug.Log("Завершено столкновение с " + other.gameObject.name);
+other.GetComponent<Renderer>().material.SetColor("_Color", Color.red);
+}
+}
+![image](https://user-images.githubusercontent.com/76123476/191678052-cfb82253-a447-4c72-81ae-b613adfa3013.png)
+Скриншоты реализации:
+![image](https://user-images.githubusercontent.com/76123476/191678225-08841bc1-deda-4f4f-9122-a911026e4bf9.png)
+![image](https://user-images.githubusercontent.com/76123476/191678284-b247c5be-305c-4e6a-9963-6e57e920a80d.png)
+
 
 ## Задание 3
-### Какова роль параметра Lr? Ответьте на вопрос, приведите пример выполнения кода, который подтверждает ваш ответ. В качестве эксперимента можете изменить значение параметра.
-
-- Перечисленные в этом туториале действия могут быть выполнены запуском на исполнение скрипт-файла, доступного [в репозитории](https://github.com/Den1sovDm1triy/hfss-scripting/blob/main/ScreatingSphereInAEDT.py).
-- Для запуска скрипт-файла откройте Ansys Electronics Desktop. Перейдите во вкладку [Automation] - [Run Script] - [Выберите файл с именем ScreatingSphereInAEDT.py из репозитория].
-
-```py
-
-import ScriptEnv
-ScriptEnv.Initialize("Ansoft.ElectronicsDesktop")
-oDesktop.RestoreWindow()
-oProject = oDesktop.NewProject()
-oProject.Rename("C:/Users/denisov.dv/Documents/Ansoft/SphereDIffraction.aedt", True)
-oProject.InsertDesign("HFSS", "HFSSDesign1", "HFSS Terminal Network", "")
-oDesign = oProject.SetActiveDesign("HFSSDesign1")
-oEditor = oDesign.SetActiveEditor("3D Modeler")
-oEditor.CreateSphere(
-	[
-		"NAME:SphereParameters",
-		"XCenter:="		, "0mm",
-		"YCenter:="		, "0mm",
-		"ZCenter:="		, "0mm",
-		"Radius:="		, "1.0770329614269mm"
-	], 
-)
-
-```
 
 ## Выводы
 
@@ -133,7 +84,3 @@ oEditor.CreateSphere(
 | OneDrive | [plugins/onedrive/README.md][PlOd] |
 | Medium | [plugins/medium/README.md][PlMe] |
 | Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
-
-## Powered by
-
-**BigDigital Team: Denisov | Fadeev | Panov**
