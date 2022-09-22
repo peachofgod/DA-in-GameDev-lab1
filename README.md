@@ -37,46 +37,22 @@
 
 ## Задание 2
 Создать первую сцену с кубом и шаром, где куб меняет цвет при столкновении с шаром и на консоле выводится текст с кем произошло столкновение.
+
 Код для реализации данной механики:
 
-
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class CheckCollider : MonoBehaviour
-{
-// Start is called before the first frame update
-void Start()
-{
-
-}
-
-// Update is called once per frame
-void Update()
-{
-
-}
-private void OnTriggerEnter(Collider other) {
-Debug.Log("Произошло столкновение с " + other.gameObject.name);
-other.GetComponent<Renderer>().material.SetColor("_Color", Color.green);
-}
-private void OnTriggerExit(Collider other) {
-Debug.Log("Завершено столкновение с " + other.gameObject.name);
-other.GetComponent<Renderer>().material.SetColor("_Color", Color.red);
-}
-}
 ![image](https://user-images.githubusercontent.com/76123476/191678052-cfb82253-a447-4c72-81ae-b613adfa3013.png)
+
 Скриншоты реализации:
+
 ![image](https://user-images.githubusercontent.com/76123476/191678225-08841bc1-deda-4f4f-9122-a911026e4bf9.png)
 ![image](https://user-images.githubusercontent.com/76123476/191678284-b247c5be-305c-4e6a-9963-6e57e920a80d.png)
 
+Ссылка на репозиторий: https://github.com/peachofgod/unity
 
 ## Задание 3
 
 ## Выводы
 
-Абзац умных слов о том, что было сделано и что было узнано.
 
 | Plugin | README |
 | ------ | ------ |
