@@ -50,6 +50,23 @@
 Ссылка на репозиторий: https://github.com/peachofgod/unity
 
 ## Задание 3
+Добавить механику с кубом и шаром. Шар должен упасть на куб и при их столкновении куб должен поменять цвет. 
+При соприкосновении с платформой шар должен исчезнуть.
+
+Код скриптов(1-куб меняет цвет при падении шара; 2-шар исчезает, когда касается платформы):
+
+![image](https://user-images.githubusercontent.com/76123476/192151542-99976441-8149-4794-b4eb-c7cfb0fcc138.png)
+
+![image](https://user-images.githubusercontent.com/76123476/192151557-7f536c6e-74c1-4ed7-863a-9e58986ee899.png)
+
+Скриншоты реализации:
+
+![image](https://user-images.githubusercontent.com/76123476/192151575-e0786d7a-d0da-4b53-9e26-1f963e36889e.png)
+
+![image](https://user-images.githubusercontent.com/76123476/192151591-04bb19a0-b957-4a06-99b2-ef24edb216e8.png)
+
+Ссылка на репозиторий: https://github.com/peachofgod/unity
+
 
 ## Выводы
 
