@@ -22,53 +22,56 @@
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 ## Цель работы
-Установить Unity, GitHub, VS Code, создать первый проект на Unity и добавить его в Git. 
+Ознакомиться с основными функциями Unity и взаимодействием с объектами внутри редактора.
 
 ## Задание 1
-Установить Unity и создать первый проект.
+1) Создаем новый проект из шаблона 3D - Core;
 
-![image](https://user-images.githubusercontent.com/76123476/191676858-11c74d65-6e08-422a-ab3e-81398b944470.png)
+![image](https://user-images.githubusercontent.com/76123476/192156567-2222644f-b7c4-43eb-b70f-d077ec6f81fc.png)
 
-Добавить его в GitHub.
+2) Проверяем интеграцию Unity с VS-Code;
 
-![image](https://user-images.githubusercontent.com/76123476/191677101-3bfead1a-3577-4439-b4d5-eb1317a1199e.png)
+![image](https://user-images.githubusercontent.com/76123476/192156783-90f8e7bf-6b21-4bb0-acd4-492f770cc320.png)
 
-Ссылка на репозиторий: https://github.com/peachofgod/unity
+3) Создаем объект Plane;
 
-## Задание 2
-Создать первую сцену с кубом и шаром, где куб меняет цвет при столкновении с шаром и на консоле выводится текст с кем произошло столкновение.
+![image](https://user-images.githubusercontent.com/76123476/192156840-d73d235d-f363-4762-9642-cc5689548ca2.png)
 
-Код для реализации данной механики:
+4) Создаем объект Cube;
 
-![image](https://user-images.githubusercontent.com/76123476/191678052-cfb82253-a447-4c72-81ae-b613adfa3013.png)
+![image](https://user-images.githubusercontent.com/76123476/192156888-dae2a221-e41d-43fe-81eb-431163a2d728.png)
 
-Скриншоты реализации:
+5) Создаем объект Sphere;
 
-![image](https://user-images.githubusercontent.com/76123476/191678225-08841bc1-deda-4f4f-9122-a911026e4bf9.png)
-![image](https://user-images.githubusercontent.com/76123476/191678284-b247c5be-305c-4e6a-9963-6e57e920a80d.png)
+![image](https://user-images.githubusercontent.com/76123476/192156949-869905af-983c-4d98-afd5-6b83096b37f8.png)
 
-Ссылка на репозиторий: https://github.com/peachofgod/unity
+6) Установим компонент Sphere Collider для объекта Sphere;
 
-## Задание 3
-Добавить механику с кубом и шаром. Шар должен упасть на куб и при их столкновении куб должен поменять цвет. 
-При соприкосновении с платформой шар должен исчезнуть.
+![image](https://user-images.githubusercontent.com/76123476/192157009-d46137e4-46e0-465f-9227-926be221f9c9.png)
 
-Код скриптов(1-куб меняет цвет при падении шара; 2-шар исчезает, когда касается платформы):
+7) Настроим Sphere Collider в роли триггера;
 
-![image](https://user-images.githubusercontent.com/76123476/192151542-99976441-8149-4794-b4eb-c7cfb0fcc138.png)
+![image](https://user-images.githubusercontent.com/76123476/192157062-5f382479-1c6a-4d2d-be94-0b80877d8a1d.png)
 
-![image](https://user-images.githubusercontent.com/76123476/192151557-7f536c6e-74c1-4ed7-863a-9e58986ee899.png)
+8) Перекрасим куб в красный цвет;
 
-Скриншоты реализации:
+![image](https://user-images.githubusercontent.com/76123476/192157126-02c01ace-2a5e-4ceb-9e20-e2ff1b368e35.png)
 
-![image](https://user-images.githubusercontent.com/76123476/192151575-e0786d7a-d0da-4b53-9e26-1f963e36889e.png)
+9) Добавляем кубу симуляцию физики и убираем гравитацию;
 
-![image](https://user-images.githubusercontent.com/76123476/192151591-04bb19a0-b957-4a06-99b2-ef24edb216e8.png)
+![image](https://user-images.githubusercontent.com/76123476/192157203-0e2856cc-f7d7-4c28-b5c6-62dc3421a063.png)
+
+10) Напишем скрипт, который будет выводить в консоль сообщение о том что объект Sphere столкнулся с объектом Cube, а он в свою очередь при столкновении меняет цвет;
+
+![image](https://user-images.githubusercontent.com/76123476/192157510-55c6a06f-0bdc-496f-856c-b17f1eb8b3a9.png)
+
+![image](https://user-images.githubusercontent.com/76123476/192157524-aa3170bd-a7f8-418f-b86a-3781e114f20a.png)
 
 Ссылка на репозиторий: https://github.com/peachofgod/unity
 
 
 ## Выводы
+Ознакомилась с первичным функционалом и создала примитивную сцену с геометрическими фигурами.
 
 
 | Plugin | README |
